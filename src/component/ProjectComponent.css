@@ -1,0 +1,148 @@
+.experience-page {
+  width: 800px;
+  margin: 0 auto;
+  height: 80vh; 
+  margin-top: 100px;
+}
+input{
+  border: 2px solid #A4C3A2;
+  padding: 10px;
+  border-radius: 1rem;
+  background-color: #A4C3A2;
+}
+select{
+  border: 2px solid #A4C3A2;
+  padding: 10px;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease-in-out;  
+  background-color: #A4C3A2;
+}
+/*transiation for catagories bar*/
+select:hover {
+  background-color: rgb(243, 241, 241);
+}
+.search-and-categories {
+  display: flex; 
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.picture {
+  width: 450px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #A4C3A2;
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+/*animation for projects*/
+@keyframes border-animation {
+  0% {
+    border-color: #fff;
+  }
+  70% {
+    border-color: #A4C3A2;
+  }
+  100% {
+    border-color: #fcf9f9;
+  }
+}
+.project { 
+  margin-top: 30px;
+  border: 2px solid #A4C3A2;
+  padding: 10px;
+  border-radius: 1rem;
+  animation: border-animation 4s infinite;
+
+}
+.project h2 {
+  margin-top: 0;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  border: 2px solid #A4C3A2;
+  border-radius: 1rem;
+  color: #333;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: #A4C3A2;
+}
+
+.pagination button.active {
+ background-color:  #A4C3A2;
+  color: #fff;
+}
+/* CSS for smaller screens*/
+@media screen and (min-width: 375px) and (max-width: 812px) {
+  .experience-page {
+    height: 140vh; 
+    width: 0px;
+    display: flex;
+    flex-direction:column;
+    margin: 0;
+  } 
+  .exp{
+    margin-left: 280px;
+  }
+  .search-and-categories {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 200px;
+    height: 35px;
+    justify-content: space-between;
+    margin-bottom: 20px; 
+  }
+  input{
+    margin-left: 38px;
+    margin-right:100px ;
+    border-radius: 1rem;
+    width: 100px;
+    font-size: 0.6rem;
+  }
+  select{
+    width: 100px;
+    font-size: 0.6rem;
+    border-radius: 1rem;
+  }
+  .project{
+    width: 310px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out; 
+    margin-left:235px;;
+    position: relative;
+  }
+  .project h2 {
+    margin-top: 0;
+    font-size: 0.8rem; 
+    padding-left:0px ;
+  }
+  p{
+    font-size: 0.8rem; 
+  }
+  .pagination {
+    display: none ;
+  }
+  .projects {
+    grid-template-columns:none;
+    grid-gap: 20px;
+  }
+  .picture {
+    object-fit: cover;
+    border-radius: 10px;
+    padding: 0px;
+    display: block;
+    width: 100%;
+    height: auto;
+   
+  }
+  
+}

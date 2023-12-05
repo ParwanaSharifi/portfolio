@@ -1,0 +1,90 @@
+*{
+  box-sizing: 0;
+}
+.skill-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+  
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  h1{
+    margin-bottom: 40px;
+  }
+  .skill-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .skill-bar {
+    position: relative;
+    width: 300px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .skill-bar ::before {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 100%;
+    background:#A4C3A2;
+    transition: width 3s ease-in-out;
+    animation: progress 7s linear infinite;
+  }
+  @keyframes progress {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  .skill-progress {
+    height: 100%;
+  }
+ .progress-text{
+  position: absolute;
+  top: 5%;
+  left: 45%;
+  color:#757575;
+  font-weight: bold;
+}
+/* CSS for smallerscreen */
+@media screen and (min-width: 375px) and (max-width: 812px)  {
+  .skill-page {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+  }
+  .skill-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+   
+  .skill-bar {
+    width: 180px;
+    height:20px;
+  }
+  .skill-progress {
+    height: 100%;
+  }
+  label{
+    padding-left: 70px;
+    font-size: 10px;
+    text-align: center;
+   }
+   
+}

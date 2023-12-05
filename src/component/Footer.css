@@ -1,0 +1,63 @@
+.footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+.footer.dark{
+    background-color: rgb(42, 42, 42);
+    color: #fff;
+}
+.footer.light{
+    background-color:#fff;
+    color: #333;
+  }
+  .day-night-button {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    border: 2px solid #A4C3A2;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 10px;
+
+  }
+
+  .day-night-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color:white;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .day-night-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #A4C3A2;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .day-night-button.active::before {
+    transform: translateX(100%);
+  }
+  
+  .day-night-button.active::after {
+    transform: translateX(-100%);
+  }
+  /* CSS for smaller screens*/
+  @media screen and (min-width: 375px) and (max-width: 812px) {
+    .footer{
+      padding: 0;
+      margin: 0px;
+    }
+ 
+   }

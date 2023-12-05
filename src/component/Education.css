@@ -1,0 +1,70 @@
+.Education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.education-card {
+  width: 300px;
+  height: 200px;
+  background-color: #A4C3A2;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.education-card:hover {
+  transform: scale(1.05);
+}
+
+.education-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.education-card:hover .education-details {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap; 
+  animation: typing 2s steps(40, end); 
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.education-details h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.education-details p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.education-details h4 {
+  font-size: 14px;
+}
+/*css for small devices*/
+@media screen and (max-width: 768px) {
+  .education-card{
+    width: 250px;
+    height: 150px;
+  }
+}
